@@ -9,9 +9,7 @@ require "faker"
 
 
 User.destroy_all
-
 Race.destroy_all
-
 Bib.destroy_all
 
 
@@ -38,5 +36,7 @@ Bib.destroy_all
   })
   race.save
 
+  reason = ["disabled", "forgotten", "absent","injured"]
 
+  user.bibs.create({price: 15, quantity: 1, sale_reason: reason.sample, race: race})
 end

@@ -3,22 +3,24 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-
-  # #pages
-  # get 'pages/home'
-  # get 'pages/about_us'
+  resources :races, only: [:index, :new, :create, :show, :edit, :update]
 
   # #users
-  # resources :users, only: [:new, :create, :show, :edit, :update]
+  resources :users, only: [:new, :create, :show, :edit, :update] do
 
-  # #races
-  # resources :races
+    # #bibs
+    resources :bibs, only: [:index, :show, :new, :create, :edit, :update]
 
-  # #bibs
-  # resources :bibs, only: [:index, :show, :new, :create, :edit, :update]
+    # #orders
+    resources :orders
 
-  # #orders
-  # resources :order
+  end
+
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
