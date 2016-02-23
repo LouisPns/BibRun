@@ -2,6 +2,23 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'pages#home'
+
+
+  # #pages
+  # get 'pages/home'
+  # get 'pages/about_us'
+
+  # #users
+  # resources :users, only: [:new, :create, :show, :edit, :update]
+
+  # #races
+  # resources :races
+
+  # #bibs
+  # resources :bibs, only: [:index, :show, :new, :create, :edit, :update]
+
+  # #orders
+  # resources :order
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
