@@ -1,0 +1,66 @@
+.profile-header-container img {
+  width: 100px;
+  border-radius: 50%;
+}
+.profile-header-wrapper {
+  background: #53443F;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  background-position: center center !important;
+}
+.profile-header-infos {
+  padding: 20px 0;
+  text-align: center;
+}
+.profile-header-container h1 {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+.profile-header-container h2 {
+  color: white;
+  opacity: 0.4;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-bottom: 0;
+  letter-spacing: -1px;
+}
+.tabs {
+  display: flex;
+  padding: 10px 10px 0 10px
+}
+.tabs a {
+  color: white;
+}
+.tabs a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.tabs h3 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.tabs p {
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+.tab {
+  background: #3E8E75;
+  flex: 0 0 50%;
+  text-align: center;
+  padding: 20px 0;
+}
+.tab:first-child {
+  border-radius: 10px 0 0 0;
+}
+.tab:last-child {
+  border-radius: 0 10px 0 0;
+}
+.tab.active {
+  background: white;
+  color: black;
+}
