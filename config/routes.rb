@@ -1,14 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users do
 
-  root to: 'pages#home'
-
-  resources :races, only: [:index, :new, :create, :show, :edit, :update]
-
-  # #users
-  resources :users, only: [:new, :create, :show, :edit, :update] do
-
-    # #bibs
+  # #bibs
     resources :bibs, only: [:index, :show, :new, :create, :edit, :update]
 
     # #orders
@@ -16,6 +9,12 @@ Rails.application.routes.draw do
 
   end
 
+  root to: 'pages#home'
+
+
+  resources :races, only: [:index, :new, :create, :show, :edit, :update]
+
+end
 
 
 
@@ -75,4 +74,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
