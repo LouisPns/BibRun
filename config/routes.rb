@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users do
+
+  get "me" => "pages#me"
+
+  devise_for :users, :controllers => { :registrations => "users/registrations"} do
+
+
 
   # #bibs
     resources :bibs, only: [:index, :show, :new, :create, :edit, :update]
