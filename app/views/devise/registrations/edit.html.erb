@@ -1,0 +1,35 @@
+<div class="well">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+
+      <h2>Edit Runner's profile </h2>
+
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.error_notification %>
+      <%= devise_error_messages! %>
+
+
+      <%= f.input :first_name, required: true, autofocus: true %>
+      <%= f.input :last_name, required: true, autofocus: true %>
+      <%= f.input :age, autofocus: true %>
+      <%= f.input :level, collection: [ "beginner", "sunday Runner", "professional"], selected: "beginner", autofocus: true %>
+      <%= f.input :email, required: true, autofocus: true %>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+      <% end %>
+
+     <!--   <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+      <%= f.input :password_confirmation, required: false %> -->
+      <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.button :submit, "Save", class: "btn btn-success btn-block" %>
+
+      <% end %>
+
+
+     </div>
+  </div>
+</div>
