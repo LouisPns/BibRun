@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   end
 
   def me
-
+    @bibs = current_user.bibs
   end
 end
