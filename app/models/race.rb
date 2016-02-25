@@ -4,6 +4,9 @@ class Race < ActiveRecord::Base
   validates :name, uniqueness: true
   CATEGORIES = %w(marathon cross night_race team_race classic_race)
 
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
   def min_price
     if !!self.bibs.first
       "From #{self.bibs(price: :desc).first.price}€"
