@@ -3,6 +3,21 @@ class RacesController < ApplicationController
 
   def index
     @races = Race.all
+    @check_in = params[:search][:check_in].to_date
+    @check_out = params[:search][:check_out].to_date
+    @search = params[:search][:address]
+    @radius = params[:search][:radius]
+
+    if @search.present?
+      @races = @races.near(@search, @radius)
+      @races = @races.select { |r| r.date.between?(@check_in, @check_out) } if @check_in.present? && @check_out.present?
+    end
+
+    # Let's DYNAMICALLY build the markers for the view.
+    @markers = Gmaps4rails.build_markers(@races) do |race, marker|
+      marker.lat race.latitude
+      marker.lng race.longitude
+    end
   end
 
   def create
