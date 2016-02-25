@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get "me" => "pages#me"
 
-  devise_for :users, :controllers => { :registrations => "users/registrations"} do
+  devise_for :users, :controllers => {:registrations => "users/registrations", omniauth_callbacks: 'users/omniauth_callbacks'} do
 
 
 
