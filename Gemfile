@@ -8,6 +8,7 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'redis'
 gem 'faker'
+gem 'omniauth-facebook'
 
 
 gem 'sass-rails'
