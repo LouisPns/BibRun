@@ -51,7 +51,7 @@
     <div class="col-sm-6">
       <div class="row">
 
-      <h1>Choose your bib</h1>
+      <h1>Select your bib</h1>
 
         <% @race.bibs.each do |bib| %>
           <div class="col-sm-6">
@@ -61,7 +61,27 @@
               <p><i>Reason: <%= bib.sale_reason %></i></p>
               <h2><span class="label label-success"><%= bib.price %>€</span></h2>
             </div>
-            <%= link_to @race.name, race_path(@race), {class: "card-link"} %>
+            <%= link_to "", "#", data: { toggle: "modal", target: "#myModal-#{bib.id}" }, class: "card-link" %>
+            </button>
+            </div>
+          </div>
+
+          <div class="modal fade" id="myModal-<%= bib.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="myModalLabel">Buy this bib</h3>
+                </div>
+                <div class="modal-body">
+                <p>Are you sure to buy this bib ?</p>
+
+                <%= simple_form_for [bib, @order] do |f| %>
+                  <%= f.button :submit, "Buy this bib", class: "btn btn-success btn-block" %>
+                <% end %>
+
+                </div>
+              </div>
             </div>
           </div>
         <% end %>
