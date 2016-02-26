@@ -4,6 +4,8 @@ class Race < ActiveRecord::Base
   validates :name, uniqueness: true
   CATEGORIES = %w(marathon cross night_race team_race classic_race)
 
+  mount_uploader :picture, PhotoUploader
+
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
 

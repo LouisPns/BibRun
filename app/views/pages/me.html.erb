@@ -5,7 +5,7 @@
     <div class="profile-header-infos">
       <%=image_tag current_user.picture.url(:bright_face), class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
       <h1><%= current_user.first_name%> <%= current_user.last_name%></h1>
-      <span class="label label-info">New bib</span>
+      <%= link_to "New bib", new_bib_path, {class: "label label-info"} %>
       <h2><%= current_user.level%></h2>
     </div>
     <div class="tabs">

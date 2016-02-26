@@ -1,2 +1,21 @@
-<h1>Races#new</h1>
-<p>Find me in app/views/races/new.html.erb</p>
+<div class="well">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+
+    <h2>New race</h2>
+
+    <%= simple_form_for @race do |f| %>
+      <%= f.input :name, label: "General info", placeholder: "Name" %>
+      <%= f.input :address, label: false, placeholder: "City" %>
+      <%= f.input :race_distance, label: false, placeholder: "Length (in miles)", selected: 25 %>
+      <%= f.input :date, label: false %>
+      <%= f.input :race_type, label: "Race type", placeholder: "Type", collection: ["Marathon", "Cross", "Night race", "Team race", "Classic race"], selected: "Classic race" %>
+      <%= f.input :label, label: "Race label", placeholder: "Label", collection: ["Trail Nature", "FFA", "No label"], selected: "FFA" %>
+      <%= f.input :picture %>
+      <%= f.input :picture_cache, as: :hidden %>
+      <%= f.button :submit, "Add my race", class: "btn btn-success btn-block" %>
+    <% end %>
+
+    </div>
+  </div>
+</div>
