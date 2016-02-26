@@ -1,0 +1,9 @@
+<%= simple_form_for @bib do |f| %>
+  <%= f.input :race, label: false, placeholder: "Race", collection: @races_names_table, selected: "Select the race" %>
+  <%= f.association :race %>
+  <%= link_to "Add new race", new_race_path %>
+  <%= f.input :price, label: false, placeholder: "Price (€)" %>
+  <%= f.input :quantity, label: false, placeholder: "Quantity" %>
+  <%= f.input :sale_reason, placeholder: "Sale reason", collection: ["Disabled", "Forgotten", "Absent", "Injured"], selected: "Select your sale reason" %>
+  <%= f.button :submit %>
+<% end %>

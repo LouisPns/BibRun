@@ -1,21 +1,14 @@
 Rails.application.routes.draw do
 
 
+
   get "me" => "pages#me"
 
-  devise_for :users, controllers: { registrations: "users/registrations", omniauth_callbacks: 'users/omniauth_callbacks'} do
-
-
-
-  # #bibs
-    resources :bibs, only: [:index, :show, :new, :create, :edit, :update]
-
-    # #orders
-    resources :orders
-
-  end
-
+  devise_for :users, controllers: { registrations: "users/registrations", omniauth_callbacks: 'users/omniauth_callbacks'}
   root to: 'pages#home'
+
+  resources :bibs, only: [:index, :show, :new, :create, :edit, :update]
+  resources :orders
 
 
   resources :races, only: [:index, :new, :create, :show, :edit, :update]

@@ -20,17 +20,18 @@ class RacesController < ApplicationController
     end
   end
 
+  def new
+    @race = Race.new
+  end
+
   def create
     @race = Race.new(race_params)
     if @race.save
-      redirect_to race_path(@race)
+      redirect_to new_bib_path
     else
+      Rails.logger.info(@race.errors.full_messages)
       render :new
     end
-  end
-
-  def new
-    @race = Race.new
   end
 
   def edit
