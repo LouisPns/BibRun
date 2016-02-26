@@ -6,7 +6,7 @@
         <div class="races_search"><%= render "hp_search" %></div>
         <% @races.each do |race| %>
           <div class="col-sm-6">
-            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= race.picture %>);">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url(<%= race.picture %>);">
 
               <div class="card-category">
                 <% if race.bibs.count == 0 %>
