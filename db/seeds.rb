@@ -19,7 +19,7 @@ user_list = [{
     last_name: "Lagarde",
     email: "lagardenicolas@gmail.com",
     age: 32,
-    picture: "https://unsplash.it/200/300/?random",
+    remote_picture_url: "https://2c1fd987323fc5582413-61ddbed9f4001b199a5e9dbd18bb2c5f.ssl.cf1.rackcdn.com/709/70855_original.jpg",
     level: "sunday",
     password: "1235689"
   },
@@ -28,7 +28,7 @@ user_list = [{
     last_name: "Pons",
     email: "louispons@gmail.com",
     age: 21,
-    picture: "https://unsplash.it/200/300/?random",
+    remote_picture_url: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAL5AAAAJGY2YmI5M2JhLWFhZmYtNDc3YS1hNGNmLTUxZmE0YzcxYzBjNQ.jpg",
     level: "professional",
     password: "mypswd"
   },
@@ -37,7 +37,7 @@ user_list = [{
     last_name: "Volpeo",
     email: "volpeo@orange.net",
     age: 28,
-    picture: "https://unsplash.it/200/300/?random",
+    remote_picture_url: "http://media.senscritique.com/media/000003992117/source/volpeo.jpg",
     level: "runner",
     password: "thisismysecret"
   },
@@ -46,7 +46,7 @@ user_list = [{
     last_name: "Surfer",
     email: "iamata@hotmail.com",
     age: 26,
-    picture: "https://unsplash.it/200/300/?random",
+    remote_picture_url: "http://photos4.meetupstatic.com/photos/member/4/0/5/7/highres_244396471.jpeg",
     level: "regular",
     password: "872BDUIOjsi"
   },
@@ -55,7 +55,7 @@ user_list = [{
     last_name: "Rodriguez",
     email: "rodriguez@josiane.com",
     age: 67,
-    picture: "https://unsplash.it/200/300/?random",
+    remote_picture_url: "http://img1.telestar.fr/var/telestar/storage/images/media/images/2015/photos/20150326-josiane-balasko/josiane-balasko/795875-1-fre-FR/Josiane-Balasko_max1024x768.jpg",
     level: "sunday",
     password: "ilovelewagonguys"
   }]
@@ -70,7 +70,7 @@ race_list = [
     race_type: Race::CATEGORIES.sample,
     label: "Trail Nature",
     distance: 16,
-    picture: "https://unsplash.it/600/300?random&gravity=center",
+    remote_picture_url: "http://www.marchons.com/attachments/626_Flyer%20Ronde%20des%20Ducs%202013.jpg",
   },
   {
     name: "Le givré de la plaine de Carbon-Blanc",
@@ -79,7 +79,7 @@ race_list = [
     race_type: Race::CATEGORIES.sample,
     label: "FFA",
     distance: 30,
-    picture: "https://unsplash.it/600/300?random&gravity=center",
+    remote_picture_url: "http://p.calameoassets.com/111117110719-c818eafda2e779598a1975b1515b86ce/p1.jpg",
   },
   {
     name: "Itsas Laminen Corrika",
@@ -88,7 +88,7 @@ race_list = [
     race_type: Race::CATEGORIES.sample,
     label: "No label",
     distance: 60,
-    picture: "https://unsplash.it/600/300?random&gravity=center",
+    remote_picture_url: "http://www.time-chrono.fr/inscriptions/vichy/vichy.jpg",
   },
   {
     name: "Le Trail des Mouflons",
@@ -97,7 +97,7 @@ race_list = [
     race_type: Race::CATEGORIES.sample,
     label: "FFA",
     distance: 45,
-    picture: "https://unsplash.it/600/300?random&gravity=center",
+    remote_picture_url: "http://courses.nature.free.fr/wp-content/uploads/2015_03_flyer_trail_mouflons.jpg",
   },
   {
     name: "Ekiden du CA Villenave",
@@ -106,7 +106,7 @@ race_list = [
     race_type: Race::CATEGORIES.sample,
     label: "Trail Nature",
     distance: 23,
-    picture: "https://unsplash.it/600/300?random&gravity=center",
+    remote_picture_url: "http://3.bp.blogspot.com/-sPWLoOkVooE/VFk8iztDsjI/AAAAAAAABG8/n5be823LK-o/s1600/affiche%2Bekiden%2B2015.jpg",
   }]
 
 puts "create reason and price table"
