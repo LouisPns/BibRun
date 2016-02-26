@@ -1,9 +1,18 @@
-<%= simple_form_for @bib do |f| %>
-  <%= f.input :race, label: false, placeholder: "Race", collection: @races_names_table, selected: "Select the race" %>
-  <%= f.association :race %>
-  <%= link_to "Add new race", new_race_path %>
-  <%= f.input :price, label: false, placeholder: "Price (€)" %>
-  <%= f.input :quantity, label: false, placeholder: "Quantity" %>
-  <%= f.input :sale_reason, placeholder: "Sale reason", collection: ["Disabled", "Forgotten", "Absent", "Injured"], selected: "Select your sale reason" %>
-  <%= f.button :submit %>
-<% end %>
+<div class="well">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+
+    <h2>New bib</h2>
+
+    <%= simple_form_for @bib do |f| %>
+      <%= f.association :race, label: "Race" %>
+      <p><i class = "fa fa-plus"> <%= link_to "Add new race", new_race_path %></i></p>
+      <%= f.input :price, label: "Bib details", placeholder: "Price (€)" %>
+      <%= f.input :quantity, label: false, placeholder: "Quantity" %>
+      <%= f.input :sale_reason, placeholder: "Sale reason", collection: ["Disabled", "Forgotten", "Absent", "Injured"], selected: "Select your sale reason" %>
+      <%= f.button :submit, class: "btn btn-success btn-block" %>
+    <% end %>
+
+    </div>
+  </div>
+</div>

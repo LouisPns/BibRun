@@ -1,5 +1,7 @@
+
+
 <!-- Banner  -->
-<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('cross.jpg');">
+<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= @race.picture %>);">
   <div class="banner-content">
     <h1><%= @race.name %></h1>
     <h2><%= @race.date %></h2>
@@ -7,13 +9,13 @@
 </div>
 
 <!-- After banner  -->
-<div class="container">
+<div class="container-fluid races_results">
   <div class="row">
 
     <div class="col-sm-6">
       <div class="row">
 
-        <div class="col-xs-12 col-sm-3">
+        <div class="col-xs-12 col-sm-3 col-sm-offset-2">
           <div class="feature">
             <h2>
               <a href=""><i class="fa fa-arrows-h"></i></a>
@@ -53,9 +55,10 @@
 
         <% @race.bibs.each do |bib| %>
           <div class="col-sm-6">
-            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/nicolas.jpg');">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= bib.user.picture %>);">
             <div class="card-description">
-              <h2><%= bib.user.first_name %></h2>
+              <h1><%= bib.user.first_name %></h1>
+              <p><i>Reason: <%= bib.sale_reason %></i></p>
               <h2><span class="label label-success"><%= bib.price %>€</span></h2>
             </div>
             <%= link_to @race.name, race_path(@race), {class: "card-link"} %>
