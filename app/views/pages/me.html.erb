@@ -13,8 +13,8 @@
     </div>
     <div class="tabs">
       <a class="tab active" data-target="#my-bibs">
-        <h3>My Bibs & Bales</h3>
-        <p><%=@current_user.bibs.count %></p>
+        <h3>My Bibs & Sales</h3>
+        <p><%=@current_user.bibs.count %> bibs</p>
       </a>
       <a class="tab" data-target="#purchases">
        <h3>My Purchases</h3>
@@ -35,7 +35,7 @@
         <h3><%=bib.race.name%></h3>
         <p><%=bib.race.date%>| <%=bib.race.race_type%> | <%=bib.race.race_distance%> km | <%=bib.race.label%></p>
         <h2><span class="label label-info"><%= bib.price %>€</span></h2>
-        <span class="label label-default"><strong>Sold</strong> to Louis (10/04/2016)</span>
+       <!--  <span class="label label-default"><strong>Sold</strong> to Louis (10/04/2016)</span> -->
       </div>
     </div>
     <% end %>
@@ -52,7 +52,7 @@
         <h3><%=o.bib.race.name%></h3>
         <p><%=o.bib.race.date%>| <%=o.bib.race.race_type%> | <%=o.bib.race.race_distance%> km | <%=o.bib.race.label%></p>
         <h2><span class="label label-info"><%= o.bib.price %>€</span></h2>
-        <span class="label label-default"><strong>Bought</strong> to Louis (10/04/2016)</span>
+        <!-- <span class="label label-default"><strong>Bought</strong> to Louis (10/04/2016)</span> -->
       </div>
     </div>
     <% end %>
