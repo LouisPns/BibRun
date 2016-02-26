@@ -69,7 +69,7 @@ race_list = [
     date: Faker::Date.forward(50),
     race_type: Race::CATEGORIES.sample,
     label: "Trail Nature",
-    distance: 16,
+    race_distance: 16,
     remote_picture_url: "http://www.marchons.com/attachments/626_Flyer%20Ronde%20des%20Ducs%202013.jpg",
   },
   {
@@ -78,7 +78,7 @@ race_list = [
     date: Faker::Date.forward(50),
     race_type: Race::CATEGORIES.sample,
     label: "FFA",
-    distance: 30,
+    race_distance: 30,
     remote_picture_url: "http://p.calameoassets.com/111117110719-c818eafda2e779598a1975b1515b86ce/p1.jpg",
   },
   {
@@ -87,7 +87,7 @@ race_list = [
     date: Faker::Date.forward(50),
     race_type: Race::CATEGORIES.sample,
     label: "No label",
-    distance: 60,
+    race_distance: 60,
     remote_picture_url: "http://www.time-chrono.fr/inscriptions/vichy/vichy.jpg",
   },
   {
@@ -96,7 +96,7 @@ race_list = [
     date: Faker::Date.forward(50),
     race_type: Race::CATEGORIES.sample,
     label: "FFA",
-    distance: 45,
+    race_distance: 45,
     remote_picture_url: "http://courses.nature.free.fr/wp-content/uploads/2015_03_flyer_trail_mouflons.jpg",
   },
   {
@@ -105,7 +105,7 @@ race_list = [
     date: Faker::Date.forward(50),
     race_type: Race::CATEGORIES.sample,
     label: "Trail Nature",
-    distance: 23,
+    race_distance: 23,
     remote_picture_url: "http://3.bp.blogspot.com/-sPWLoOkVooE/VFk8iztDsjI/AAAAAAAABG8/n5be823LK-o/s1600/affiche%2Bekiden%2B2015.jpg",
   }]
 
