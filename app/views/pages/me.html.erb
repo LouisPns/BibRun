@@ -5,7 +5,10 @@
     <div class="profile-header-infos">
       <%=image_tag current_user.picture.url(:bright_face), class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
       <h1><%= current_user.first_name%> <%= current_user.last_name%></h1>
+
       <%= link_to "New bib", new_bib_path, {class: "label label-info"} %>
+      <%= link_to t("Edit my profile", default: "Edit my profile"), edit_user_registration_path, class: "label label-success" %>
+
       <h2><%= current_user.level%></h2>
     </div>
     <div class="tabs">
@@ -13,7 +16,7 @@
         <h3>My Bibs & Bales</h3>
         <p><%=@current_user.bibs.count %></p>
       </a>
-      <a class="tab" data-target="#purchaces">
+      <a class="tab" data-target="#purchases">
        <h3>My Purchases</h3>
        <p><%=@current_user.orders.count%> bibs</p>
      </a>
@@ -21,11 +24,13 @@
  </div>
 </div>
 
+
 <div class="container ">
   <div class="tab-content" data-target="my-bibs" id="my-bibs">
     <% @bibs.each do |bib| %>
     <div class="product">
-      <img src="cross.jpg" alt="race" class="product-image">
+    <div class="product-arrow"></div>
+      <%= cl_image_tag bib.race.picture, height: 150, width: 100, crop: :fill %>
       <div class='product-body'>
         <h3><%=bib.race.name%></h3>
         <p><%=bib.race.date%>| <%=bib.race.race_type%> | <%=bib.race.race_distance%> km | <%=bib.race.label%></p>
@@ -35,23 +40,24 @@
     </div>
     <% end %>
   </div>
-  <div class="tab-content hidden" id="purchaces">
+</div>
+
+
+<div class="container">
+  <div class="tab-content hidden" data-target="#purchases" id="purchases">
     <% @current_user.orders.each do |o| %>
     <div class="product">
-     <img src="cross.jpg" alt="race" class="product-image">
-     <div class='product-body'>
-      <h3><%=o.bib.race.name%></h3>
-      <p><%=o.bib.race.date%>| <%=o.bib.race.race_type%> | <%=o.bib.race.race_distance%> km | <%=o.bib.race.label%></p>
-      <h2><span class="label label-info"><%= o.bib.price %>€</span></h2>
-      <% end %>
-      <span class="label label-default"><strong>Bought</strong> to Louis (10/04/2016)</span>
+      <%= cl_image_tag o.bib.race.picture, height: 150, width: 100, crop: :fill %>
+      <div class='product-body'>
+        <h3><%=o.bib.race.name%></h3>
+        <p><%=o.bib.race.date%>| <%=o.bib.race.race_type%> | <%=o.bib.race.race_distance%> km | <%=o.bib.race.label%></p>
+        <h2><span class="label label-info"><%= o.bib.price %>€</span></h2>
+        <span class="label label-default"><strong>Bought</strong> to Louis (10/04/2016)</span>
+      </div>
     </div>
+    <% end %>
   </div>
 </div>
-
-</div>
-
-
 
 
 
