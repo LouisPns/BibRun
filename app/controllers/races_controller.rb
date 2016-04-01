@@ -44,8 +44,6 @@ class RacesController < ApplicationController
     @order = Order.new
   end
 
-  def update
-  end
 
   private
 

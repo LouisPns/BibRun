@@ -1,12 +1,5 @@
 class OrdersController < ApplicationController
-  def new
-  end
 
-  def index
-  end
-
-  def show
-  end
 
   def create
     @order = current_user.orders.new(date: Date.today)
@@ -17,12 +10,6 @@ class OrdersController < ApplicationController
     else
       render :create
     end
-  end
-
-  def edit
-  end
-
-  def update
   end
 
 end
