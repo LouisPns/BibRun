@@ -12,6 +12,7 @@
 .profile-header-infos {
   padding: 20px 0;
   text-align: center;
+  display: center;
 }
 .profile-header-container h1 {
   color: white;
@@ -27,12 +28,16 @@
   margin-bottom: 0;
   letter-spacing: -1px;
 }
+.profil-bottom{
+  margin-top: 100px;
+  text-align: center;
+}
 .tabs {
   display: flex;
-  padding: 10px 10px 0 10px
+  padding: 10px 10px 0 10px;
 }
 .tabs a {
-  color: white;
+  color: black;
 }
 .tabs a:hover {
   cursor: pointer;
@@ -49,10 +54,13 @@
   margin-bottom: 0;
 }
 .tab {
-  background: #3E8E75;
+  // background: #3E8E75;
+  background: white;
   flex: 0 0 50%;
   text-align: center;
-  padding: 20px 0;
+  padding: 5px 0;
+  box-shadow: inset 0 -3px 6px 0px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
 }
 .tab:first-child {
   border-radius: 10px 0 0 0;
@@ -63,4 +71,9 @@
 .tab.active {
   background: white;
   color: black;
+  box-shadow: none;
+  opacity: 1;
+&:hover{
+  opacity: 1;
+  }
 }
