@@ -1,10 +1,10 @@
-<%= simple_form_for :search, url: races_path, method: :get do |f| %>
+<!-- <%= simple_form_for :search, url: races_path, method: :get do |f| %>
   <%= f.input :address, :class => 'btn-success', label: false, placeholder: "City", input_html: {value: @search} %>
   <%= f.input :radius, label: false, placeholder: "Radius", collection: [1, 10, 100, 300], selected: @radius || 100 %>
   <%= f.input :check_in, label: false, placeholder: "Beginning date", input_html: { type: :date, value: @check_in } %>
   <%= f.input :check_out, label: false, input_html: { type: :date, value: @check_out } %>
   <%= f.button :submit, "Go!", :class => "btn-success" %>
-<% end %>
+<% end %> -->
 
 <!-- Race.near('Tour Eiffel', 10) -->
 
@@ -15,3 +15,7 @@
      <button class="btn btn-success" type="button">Go!</button>
      </span>
    </div> -->
+
+
+   <%= link_to t(".top_call_to_action", default: "Trouver un dossard"), "/bibs/new", class: "navbar-wagon-item navbar-wagon-button btn" %>
+   <%= link_to t(".top_call_to_action", default: "Déposer votre dossard"), "/races", class: "navbar-wagon-item navbar-wagon-button-buy btn" %>
