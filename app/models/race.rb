@@ -11,9 +11,9 @@ class Race < ActiveRecord::Base
 
   def min_price
     if !!self.bibs.first
-      "From #{self.bibs(price: :desc).first.price}€"
-    else
-      "Add your bib"
+      "A partir de  #{self.bibs(price: :desc).first.price}€"
+    # else
+      # "Add your bib"
     end
   end
 
