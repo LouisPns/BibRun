@@ -1,22 +1,25 @@
 <!-- Banner with search buttons  -->
-<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('');">
-  <div class="banner-content">
-    <h1>LateRun</h1>
-    <p>Trouver mon dossard au dernier moment !</p>
-    <!-- <a class="btn btn-primary btn-lg">GET IT</a> -->
+<div class="banner ig-mayfair" style="background: linear-gradient(-225deg, rgba(48,67,82,0.6) 0%, rgba(215,210,204,0.6) 50% ), url(<%= image_url('banner2.jpg') %>);">
 
+  <div class="banner-content">
+     <div class="logo"><%= image_tag "l.png" %>
+    <!-- <h1>LateRun </h1>
+    <p><h3>Dernière chance avant le départ !</h3></p> -->
+    <!-- <a class="btn btn-primary btn-lg">GET IT</a> -->
+      <div class="text-center form-inline">
+        <%= render "races/hp_search" %>
+      </div>
+    </div>
     <div class="container">
       <div class="row">
-        <div class="text-center form-inline">
-          <%= render "races/hp_search" %>
-          </div>
+
       </div>
     </div>
   </div>
 </div>
 
 <!-- Cards with courses types  -->
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6">
 
@@ -73,3 +76,4 @@
     </div>
   </div>
 </div>
+ -->

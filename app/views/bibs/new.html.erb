@@ -6,9 +6,9 @@
       <%= simple_form_for @bib do |f| %>
         <%= f.association :race, label: "Nom de la course" %>
         <p><i class = "fa fa-plus"> <%= link_to "Ajouter une course ?", new_race_path %></i></p>
-        <%= f.input :price, label: "Prix du dossard" %>
+        <%= f.input :price, label: "Prix du dossard (€)" %>
         <%#= f.input :quantity, label: false, placeholder: "Quantity" %>
-        <%= f.input :sale_reason,label: "Motif de la vente", collection: [ "Malade", "Blessé(e)", "Autre"] %>
+        <%= f.input :sale_reason,label: "Motif de la vente", collection: [ "Malade", "Blessé(e)", "Autre"], selected: "Blessé(e)" %>
         <%= f.submit t('Déposer mon dossard', :default => "Déposer mon dossard"), class: "btn btn-block btn-success" %>
       <% end %>
     </div>

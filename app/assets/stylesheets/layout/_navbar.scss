@@ -50,7 +50,7 @@
 
 /* Navbar right button */
 .navbar-wagon-button {
-  padding: 5px 35px;
+  padding: - 5px;
   border-radius: 3px;
   line-height: 40px;
   background-color: black;
@@ -60,7 +60,7 @@
 }
 .navbar-wagon-button-buy {
   margin-left: 10px;
-  padding: 5px 35px;
+  padding: - 5px;
   border-radius: 3px;
   line-height: 40px;
   background-color: #FFF;
@@ -68,17 +68,28 @@
   font-size: 14px;
   border: 2px solid black;
 }
-.navbar-wagon-button-buy:hover {
-  color: white;
-  background: black;
-  border-color: #DD572B;
-}
-.navbar-wagon-button:hover {
-  color: black ;
+.navbar-wagon-button-buy {
+  color: #fff;
+  background: #D15F09;
+  border-color: #fff;
+  font-weight: bold;
+  &:hover{
+  color: #D15F09;
   background: #FFF;
-  border-color: #3E8E75;
+  border-color: #D15F09;
+  }
 }
-
+.navbar-wagon-button {
+  color: #fff ;
+  background: #9DE029;
+  border-color:   #fff;
+  font-weight: bold;
+&:hover{
+  color: #9DE029 ;
+  background: #FFF;
+  border-color:   #9DE029;
+  }
+}
 /* Navbar search form */
 .navbar-wagon-search {
   flex: 0 1 300px;
@@ -142,4 +153,16 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+.logo {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+.logo img {
+  width: 780px;
+  height: 280px;
+
 }
