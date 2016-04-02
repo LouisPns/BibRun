@@ -29,7 +29,7 @@
           <div class="feature">
             <h2>
               <a href=""><i class="fa fa-trophy"></i></a>
-              Race type
+              Type de course
             </h2>
             <p><%= @race.race_type %></p>
           </div>
@@ -55,7 +55,7 @@
 
         <% @race.bibs.each do |bib| %>
         <div class="col-sm-6">
-          <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= bib.user.picture %>);">
+          <div class="card ig-mayfair" style="background: url(<%= bib.user.picture %>);">
             <div class="card-description">
               <h1><%= bib.user.first_name %></h1>
               <p><i>Reason: <%= bib.sale_reason %></i></p>
