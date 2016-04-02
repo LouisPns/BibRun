@@ -72,7 +72,6 @@ ActiveRecord::Schema.define(version: 20160225150442) do
     t.string   "picture"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "photo"
     t.string   "provider"
     t.string   "uid"
     t.string   "token"

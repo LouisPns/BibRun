@@ -43,3 +43,5 @@ end
 gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
