@@ -39,7 +39,7 @@
           <div class="feature">
             <h2>
               <a href=""><i class="fa fa-tags"></i></a>
-              Category
+              Categorie
             </h2>
             <p><%= @race.label %></p>
           </div>
@@ -51,14 +51,14 @@
     <div class="col-sm-6">
       <div class="row">
 
-        <h1>Select your bib</h1>
+        <h1>Selectionez votre Dossard</h1>
 
         <% @race.bibs.each do |bib| %>
         <div class="col-sm-6">
           <div class="card ig-mayfair" style="background: url(<%= bib.user.picture %>);">
             <div class="card-description">
               <h1><%= bib.user.first_name %></h1>
-              <p><i>Reason: <%= bib.sale_reason %></i></p>
+              <p><i>Raison: <%= bib.sale_reason %></i></p>
               <h2><span class="label label-success"><%= bib.price %>€</span></h2>
             </div>
             <%= link_to "", "#", data: { toggle: "modal", target: "#myModal-#{bib.id}" }, class: "card-link" %>
@@ -71,21 +71,21 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h3 class="modal-title" id="myModalLabel">Buy this bib</h3>
+              <h3 class="modal-title" id="myModalLabel">Acheter ce dossard</h3>
             </div>
             <div class="modal-body">
 
               <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= bib.user.picture %>);">
                 <div class="card-description">
                   <h1><%= bib.user.first_name %></h1>
-                  <p><i>Reason: <%= bib.sale_reason %></i></p>
+                  <p><i>Raison: <%= bib.sale_reason %></i></p>
                   <h2><span class="label label-success"><%= bib.price %>€</span></h2>
                 </div>
               </button>
             </div>
 
             <%= simple_form_for [bib, @order] do |f| %>
-            <%= f.button :submit, "Confirm my purchase", class: "btn btn-success btn-block" %>
+            <%= f.button :submit, "Confirmer cet achat", class: "btn btn-success btn-block" %>
             <% end %>
 
           </div>
@@ -98,4 +98,3 @@
 
 </div>
 </div>
-
