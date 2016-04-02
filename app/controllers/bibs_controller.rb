@@ -17,7 +17,7 @@ class BibsController < ApplicationController
   private
 
   def bib_params
-    params[:bib].permit(:price, :quantity, :sale_reason, :race_id, :user_id)
+    params[:bib].permit(:price, :sale_reason, :race_id, :user_id)
   end
 
 end
