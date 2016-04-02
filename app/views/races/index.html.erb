@@ -3,28 +3,34 @@
 
     <div class="col-sm-6">
       <div class="row text-center form-inline">
-        <div class="races_search"><%= render "hp_search" %></div>
+        <div class="races_search">
+          <%= simple_form_for :search, url: races_path, method: :get do |f| %>
+            <%= f.input :address, :class => 'btn-success', label: false, placeholder: "City", input_html: {value: @search} %>
+            <%= f.button :submit, "Go!", :class => "btn-success" %>
+          <% end %>
+        </div>
         <% @races.each do |race| %>
           <div class="col-sm-6">
-            <div class="card ig-mayfair " style="background: url(<%= race.picture %>);">
+            <div class="card ig-mayfair " style="background: url(<%= image_url('banner.jpg') %>);">
 
               <div class="card-category">
                 <% if race.bibs.count == 0 %>
                   <span class="label label-default">Pas de dossard disponible</span>
                 <% else %>
-                  <span class="label label-success"><%= race.bibs.count %> bibs available</span>
+                  <span class="label label-success"><%= race.bibs.count %> dossards disponibles</span>
                 <% end %>
               </div>
               <div class="card-description">
                 <h2><%= race.name %></h2>
-                <% if race.min_price == "Add your bib" %>
+                <!-- <% if race.min_price == "ajouter un dossard" %>
                   <h2><span class="label label-default"><%= race.min_price %></span></h2>
                 <% else %>
                   <h2><span class="label label-success"><%= race.min_price %></span></h2>
-                <% end %>
-                <p><%= race.race_type %> | <%= race.date %></p>
+
+                <% end %> -->
+                <!-- <p><%= race.date %></p> -->
+                <%= link_to race.name, race_path(race.id), {class: "card-link"} %>
               </div>
-              <%= link_to race.name, race_path(race.id), {class: "card-link"} %>
             </div>
           </div>
         <% end %>
