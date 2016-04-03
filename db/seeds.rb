@@ -17,20 +17,20 @@ Bib.destroy_all
 user_list = [{
     first_name: "Nicolas",
     last_name: "Lagarde",
-    email: "lagardenicolas@gmail.com",
+    email: "lagarde@gmail.com",
     age: 32,
     remote_picture_url: "https://2c1fd987323fc5582413-61ddbed9f4001b199a5e9dbd18bb2c5f.ssl.cf1.rackcdn.com/709/70855_original.jpg",
     level: "sunday",
-    password: "1235689"
+    password: "123soleil"
   },
   {
     first_name: "Louis",
     last_name: "Pons",
-    email: "louispons@gmail.com",
+    email: "pons@gmail.com",
     age: 21,
-    remote_picture_url: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAL5AAAAJGY2YmI5M2JhLWFhZmYtNDc3YS1hNGNmLTUxZmE0YzcxYzBjNQ.jpg",
+    remote_picture_url: "",
     level: "professional",
-    password: "mypswd"
+    password: "123soleil"
   },
   {
     first_name: "Sylvain",
@@ -44,11 +44,11 @@ user_list = [{
   {
     first_name: "Florent",
     last_name: "Surfer",
-    email: "iamata@hotmail.com",
+    email: "surfer@hotmail.com",
     age: 26,
     remote_picture_url: "http://photos4.meetupstatic.com/photos/member/4/0/5/7/highres_244396471.jpeg",
     level: "regular",
-    password: "872BDUIOjsi"
+    password: "123soleil"
   },
   {
     first_name: "Josiane",
@@ -57,7 +57,7 @@ user_list = [{
     age: 67,
     remote_picture_url: "http://img1.telestar.fr/var/telestar/storage/images/media/images/2015/photos/20150326-josiane-balasko/josiane-balasko/795875-1-fre-FR/Josiane-Balasko_max1024x768.jpg",
     level: "sunday",
-    password: "ilovelewagonguys"
+    password: "123soleil"
   }]
 
 # RACES SEED
@@ -73,13 +73,13 @@ race_list = [
     remote_picture_url: "http://www.marchons.com/attachments/626_Flyer%20Ronde%20des%20Ducs%202013.jpg",
   },
   {
-    name: "Le givré de la plaine de Carbon-Blanc",
-    address: "Carbon-Blanc",
+    name: "Le marathon du Medoc",
+    address: "Pauliac",
     date: Faker::Date.forward(50),
     race_type: Race::CATEGORIES.sample,
     label: "FFA",
     race_distance: 30,
-    remote_picture_url: "http://p.calameoassets.com/111117110719-c818eafda2e779598a1975b1515b86ce/p1.jpg",
+    remote_picture_url: "http://www.marathons.fr/IMG/arton118.png?1431712857",
   },
   {
     name: "Itsas Laminen Corrika",
@@ -109,7 +109,7 @@ race_list = [
     remote_picture_url: "http://3.bp.blogspot.com/-sPWLoOkVooE/VFk8iztDsjI/AAAAAAAABG8/n5be823LK-o/s1600/affiche%2Bekiden%2B2015.jpg",
   }]
 
-puts "create reason and price table"
+
 reason = ["disabled", "forgotten", "absent", "injured"]
 price = [50, 25, 70, 55]
 
@@ -147,4 +147,3 @@ User.first.bibs.create({price: price.sample, quantity: 1, sale_reason: reason.sa
 #     picture: "https://unsplash.it/600/300?random&gravity=center",
 #   })
 #   race.save
-
