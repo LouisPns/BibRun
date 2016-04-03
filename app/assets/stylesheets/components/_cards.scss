@@ -23,20 +23,26 @@
   right: 0;
   bottom: 0;
 }
-.card-description-1 {
+.card-description-1{
   text-align: center;
   width: 100%;
-  margin-top: 26px;
+  padding-top: 60px;
   background-color: rgba(255, 255, 255, 0.6);
+  height: 100%;
 }
 .card-description {
   text-align: center;
   width: 100%;
   margin-top: 26px;
-  
+
 }
+.card-description-1 h2 {
+  font-size: 20px;
+  color: black;
+}
+
 .card-description h2 {
-  font-size: 24px;
+  font-size: 20px;
   color: black;
 }
 .card-description p {
