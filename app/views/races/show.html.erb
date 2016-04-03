@@ -4,7 +4,7 @@
 <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= @race.picture %>);">
   <div class="banner-content">
     <h1><%= @race.name %></h1>
-    <h2><%= @race.date %></h2>
+    <h2>Départ le : <%= l(@race.date, format: :long) %></h2>
   </div>
 </div>
 
@@ -21,7 +21,7 @@
               <a href=""><i class="fa fa-arrows-h"></i></a>
               Distance
             </h2>
-            <p><%= @race.race_distance %> miles</p>
+            <p><%= @race.race_distance %> kms</p>
           </div>
         </div>
 
@@ -31,7 +31,7 @@
               <a href=""><i class="fa fa-trophy"></i></a>
               Type de course
             </h2>
-            <p><%= @race.race_type %></p>
+            <p> Nocturne</p>
           </div>
         </div>
 
@@ -39,9 +39,9 @@
           <div class="feature">
             <h2>
               <a href=""><i class="fa fa-tags"></i></a>
-              Categorie
+              Catégorie
             </h2>
-            <p><%= @race.label %></p>
+            <p><%= @race.label.capitalize %></p>
           </div>
         </div>
 
@@ -51,7 +51,7 @@
     <div class="col-sm-6">
       <div class="row">
 
-        <h1>Selectionez votre Dossard</h1>
+        <h3>Dossards actuellement disponibles :</h3>
 
         <% @race.bibs.each do |bib| %>
         <div class="col-sm-6">

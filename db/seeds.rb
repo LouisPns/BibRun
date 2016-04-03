@@ -51,11 +51,11 @@ user_list = [{
     password: "123soleil"
   },
   {
-    first_name: "Josiane",
-    last_name: "Rodriguez",
-    email: "rodriguez@josiane.com",
-    age: 67,
-    remote_picture_url: "http://img1.telestar.fr/var/telestar/storage/images/media/images/2015/photos/20150326-josiane-balasko/josiane-balasko/795875-1-fre-FR/Josiane-Balasko_max1024x768.jpg",
+    first_name: "Samy",
+    last_name: "Gonzalez",
+    email: "samy@run.com",
+    age: 29,
+    remote_picture_url: "http://runners.fr/wp-content/uploads/2015/09/Runner2_1.jpg",
     level: "sunday",
     password: "123soleil"
   }]
@@ -63,6 +63,16 @@ user_list = [{
 # RACES SEED
 
 race_list = [
+  {
+    name: "Marathon de Bordeaux ",
+    address: "Bordeaux",
+    date: DateTime.now + 6,
+    race_type: Race::CATEGORIES.sample,
+    label: "marathon",
+    race_distance: 42,
+    remote_picture_url: "http://www.marathondebordeauxmetropole.com/typo3temp/_processed_/csm_Visuel_web_01_8afaa42208.jpg",
+  },
+
   {
     name: "Course langonnaise athletisme",
     address: "Langon",
@@ -82,15 +92,6 @@ race_list = [
     remote_picture_url: "http://www.marathons.fr/IMG/arton118.png?1431712857",
   },
   {
-    name: "Itsas Laminen Corrika",
-    address: "Listrac-Médoc",
-    date: Faker::Date.forward(50),
-    race_type: Race::CATEGORIES.sample,
-    label: "No label",
-    race_distance: 60,
-    remote_picture_url: "http://www.time-chrono.fr/inscriptions/vichy/vichy.jpg",
-  },
-  {
     name: "Le Trail des Mouflons",
     address: "Libourne",
     date: Faker::Date.forward(50),
@@ -100,12 +101,12 @@ race_list = [
     remote_picture_url: "http://courses.nature.free.fr/wp-content/uploads/2015_03_flyer_trail_mouflons.jpg",
   },
   {
-    name: "Ekiden du CA Villenave",
-    address: "Villenave d'Ornon",
+    name: "10km des quais",
+    address: "Bordeaux",
     date: Faker::Date.forward(50),
     race_type: Race::CATEGORIES.sample,
-    label: "Trail Nature",
-    race_distance: 23,
+    label: "bitume",
+    race_distance: 10,
     remote_picture_url: "http://3.bp.blogspot.com/-sPWLoOkVooE/VFk8iztDsjI/AAAAAAAABG8/n5be823LK-o/s1600/affiche%2Bekiden%2B2015.jpg",
   }]
 
@@ -124,7 +125,7 @@ user_list.each do |u|
 end
 
 User.first.bibs.create({price: price.sample, quantity: 1, sale_reason: reason.sample, race: Race.last})
-
+User.last.bibs.create({price: price.sample, quantity: 1, sale_reason: reason.sample, race: Race.last})
 # 10.times do |i|
 #   user = User.new({
 #     first_name: Faker::Name.first_name,
