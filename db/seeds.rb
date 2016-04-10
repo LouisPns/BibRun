@@ -12,7 +12,8 @@ User.destroy_all
 Race.destroy_all
 Bib.destroy_all
 
-# USERS SEED
+# USERS SEEDs
+
 
 user_list = [{
     first_name: "Nicolas",
@@ -112,7 +113,7 @@ race_list = [
 
 
 reason = ["disabled", "forgotten", "absent", "injured"]
-price = [50, 25, 70, 55]
+price = [50, 70, 55]
 
 race_list.each do |r|
   race = Race.new(r)
@@ -126,6 +127,7 @@ end
 
 User.first.bibs.create({price: price.sample, quantity: 1, sale_reason: reason.sample, race: Race.last})
 User.last.bibs.create({price: price.sample, quantity: 1, sale_reason: reason.sample, race: Race.last})
+User.last.bibs.create({price: price.sample, quantity: 1, sale_reason: reason.sample, race: Race.first)
 # 10.times do |i|
 #   user = User.new({
 #     first_name: Faker::Name.first_name,

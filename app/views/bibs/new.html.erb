@@ -1,12 +1,12 @@
 <div class="well">
   <div class="container-fluid">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <h2>Je vends un dossard :</h2>
+      <h2>Je vends mon dossard :</h2>
 
       <%= simple_form_for @bib do |f| %>
         <%= f.association :race, label: "Nom de la course" %>
         <p><i class = "fa fa-plus"> <%= link_to "Ajouter une course ?", new_race_path %></i></p>
-        <%= f.input :price, label: "Prix du dossard (€)" %>
+        <%= f.input :price, label: "Mon prix de vente souhaité" %>
         <%#= f.input :quantity, label: false, placeholder: "Quantity" %>
         <%= f.input :sale_reason,label: "Motif de la vente", collection: [ "Malade", "Blessé(e)", "Autre"], selected: "Blessé(e)" %>
         <%= f.submit t('Déposer mon dossard', :default => "Déposer mon dossard"), class: "btn btn-block btn-success" %>
