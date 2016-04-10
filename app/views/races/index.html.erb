@@ -3,12 +3,12 @@
 
     <div class="col-sm-6">
       <div class="row text-center form-inline">
-   <!--      <div class="races_search">
+        <div class="races_search">
           <%= simple_form_for :search, url: races_path, method: :get do |f| %>
             <%= f.input :address, :class => 'btn-success', label: false, placeholder: "City", input_html: {value: @search} %>
             <%= f.button :submit, "Go!", :class => "btn-success" %>
           <% end %>
-        </div> -->
+        </div>
         <% @races.each do |race| %>
           <div class="col-sm-6">
             <div class="card ig-mayfair " style="background: url(<%= image_url('banner.jpg') %>);">
